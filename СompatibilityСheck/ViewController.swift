@@ -61,9 +61,51 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .white
+        
+        view.addSubview(firstLabel)
+        view.addSubview(secondLabel)
+        view.addSubview(addNameOne)
+        view.addSubview(thirdLabel)
+        view.addSubview(adNameTwo)
+        view.addSubview(buttonCreat)
+        
+        firstLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(100)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        secondLabel.snp.makeConstraints { make in
+            make.top.equalTo(firstLabel.snp.top).offset(100)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+//          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
+        }
+        
+        addNameOne.snp.makeConstraints { make in
+            make.top.equalTo(firstLabel.snp.top).offset(100)
+            make.leading.equalTo(secondLabel.snp.leading).offset(160)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        thirdLabel.snp.makeConstraints { make in
+            make.top.equalTo(secondLabel.snp.top).offset(100)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+//          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
+        }
+        
+        adNameTwo.snp.makeConstraints { make in
+            make.top.equalTo(addNameOne.snp.top).offset(100)
+            make.leading.equalTo(thirdLabel.snp.leading).offset(160)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        buttonCreat.snp.makeConstraints { make in
+            make.top.equalTo(adNameTwo.snp.top).offset(100)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(160)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-160)
+        }
     }
-    
-    
 }
 
