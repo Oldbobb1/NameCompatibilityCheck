@@ -9,46 +9,14 @@ import SnapKit
 
 class SecondViewController: UIViewController{
     
-     var firstName: String!
-     var secondName: String!
+    var firstName: String!
+    var secondName: String!
     
     private var resultValue = 0
     
-    private let firstLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Compatibility of"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:30)
-        label.textColor = .black
-        return label
-    }()
-    
-    private let secondLabel: UILabel = {
-        let label = UILabel()
-        label.text = "First Name and Second Name"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:20)
-        label.textColor = .black
-        return label
-    }()
-    
-    private let thirdLabel: UILabel = {
-        let label = UILabel()
-        label.text =  "%"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:15)
-        label.textColor = .black
-        return label
-    }()
-    
-    private let buttonCreat: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Go Back", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.layer.cornerRadius = 11
-        button.backgroundColor = .systemBlue
-        return button
-    }()
+    private let firstLabel = createLabel(text: "Compatibility of", fontSize: 30)
+    private let secondLabel = createLabel(text: "First Name and Second Name", fontSize: 20)
+    private let thirdLabel = createLabel(text: "%", fontSize: 15)
     
     private let progress: UIProgressView = {
         let prog = UIProgressView()
@@ -62,23 +30,24 @@ class SecondViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let button = createButton(setTitle: "Go Back")
+        button.layer.cornerRadius = 11
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        
         resultValue = findResult()
         
         secondLabel.text = "\(firstName ?? "" ) and \(secondName ?? "" )"
         thirdLabel.text = resultValue.formatted(.percent)
-
+        
         progress.progress = Float(resultValue) / 100
         
         view.backgroundColor = .white
-        
         view.addSubview(firstLabel)
         view.addSubview(secondLabel)
         view.addSubview(progress)
-        view.addSubview(buttonCreat)
+        view.addSubview(button)
         view.addSubview(thirdLabel)
-        
-        buttonCreat.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-        
         
         firstLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(100)
@@ -103,7 +72,7 @@ class SecondViewController: UIViewController{
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
         }
         
-        buttonCreat.snp.makeConstraints { make in
+        button.snp.makeConstraints { make in
             make.top.equalTo(thirdLabel.snp.top).offset(70)
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(140)
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-140)
@@ -111,7 +80,6 @@ class SecondViewController: UIViewController{
     }
     
     @objc  func closeButtonTapped() {
-        
         UIView.animate(withDuration: 0.1) {
             self.view.frame.origin.y = self.view.frame.height
         } completion: { _ in

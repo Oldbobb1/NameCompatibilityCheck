@@ -15,6 +15,7 @@
 		C42838AA2B9338F4009EE204 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C42838A92B9338F4009EE204 /* SnapKit */; };
 		C42838AC2B9338F4009EE204 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C42838AB2B9338F4009EE204 /* SnapKit-Dynamic */; };
 		C42838AE2B933C80009EE204 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42838AD2B933C80009EE204 /* SecondView.swift */; };
+		C42838B02B9342F3009EE204 /* CreatsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42838AF2B9342F3009EE204 /* CreatsElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C428389F2B933809009EE204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42838A12B933809009EE204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42838AD2B933C80009EE204 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		C42838AF2B9342F3009EE204 /* CreatsElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatsElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C42838A72B9338B0009EE204 /* Aplication */,
 				C42838972B933808009EE204 /* ViewController.swift */,
 				C42838AD2B933C80009EE204 /* SecondView.swift */,
+				C42838AF2B9342F3009EE204 /* CreatsElements.swift */,
 				C428389C2B933809009EE204 /* Assets.xcassets */,
 				C428389E2B933809009EE204 /* LaunchScreen.storyboard */,
 				C42838A12B933809009EE204 /* Info.plist */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42838982B933808009EE204 /* ViewController.swift in Sources */,
+				C42838B02B9342F3009EE204 /* CreatsElements.swift in Sources */,
 				C42838942B933808009EE204 /* AppDelegate.swift in Sources */,
 				C42838AE2B933C80009EE204 /* SecondView.swift in Sources */,
 				C42838962B933808009EE204 /* SceneDelegate.swift in Sources */,

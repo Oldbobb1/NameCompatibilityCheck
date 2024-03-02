@@ -9,69 +9,28 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    private let firstLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Names Compatibility"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:30)
-        label.textColor = .black
-        return label
-    }()
+    private let firstLabel = createLabel(text: "Names Compatibility", fontSize: 30)
+    private let secondLabel = createLabel(text: "Your Name:", fontSize: 20)
+    private let thirdLabel = createLabel(text: "Parther's Name:", fontSize: 20)
     
-    private let secondLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Your Name:"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:20)
-        label.textColor = .black
-        return label
-    }()
+    private lazy var addNameOne = createTextField()
+    private lazy var adNameTwo = createTextField()
     
-    private let thirdLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Parther's Name:"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize:20)
-        label.textColor = .black
-        return label
-    }()
-    
-    private lazy var addNameOne: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = ""
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
-    
-    private lazy var adNameTwo: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = ""
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
-    
-    private let buttonCreat: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Result", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.layer.cornerRadius = 11
-        button.backgroundColor = .systemBlue
-        return button
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonCreat.addTarget(self, action: #selector(showView), for: .touchUpInside)
+        let button = createButton(setTitle: "Result")
+        button.layer.cornerRadius = 11
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(showView), for: .touchUpInside)
         
         view.backgroundColor = .white
-        
         view.addSubview(firstLabel)
         view.addSubview(secondLabel)
         view.addSubview(addNameOne)
         view.addSubview(thirdLabel)
         view.addSubview(adNameTwo)
-        view.addSubview(buttonCreat)
+        view.addSubview(button)
         
         firstLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(100)
@@ -82,7 +41,7 @@ class ViewController: UIViewController {
         secondLabel.snp.makeConstraints { make in
             make.top.equalTo(firstLabel.snp.top).offset(100)
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-//          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
+            //          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
         }
         
         addNameOne.snp.makeConstraints { make in
@@ -94,7 +53,7 @@ class ViewController: UIViewController {
         thirdLabel.snp.makeConstraints { make in
             make.top.equalTo(secondLabel.snp.top).offset(100)
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-//          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
+            //          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
         }
         
         adNameTwo.snp.makeConstraints { make in
@@ -103,7 +62,7 @@ class ViewController: UIViewController {
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
         }
         
-        buttonCreat.snp.makeConstraints { make in
+        button.snp.makeConstraints { make in
             make.top.equalTo(adNameTwo.snp.top).offset(100)
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(160)
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-160)
