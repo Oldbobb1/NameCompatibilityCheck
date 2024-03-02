@@ -62,6 +62,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buttonCreat.addTarget(self, action: #selector(showView), for: .touchUpInside)
+        
         view.backgroundColor = .white
         
         view.addSubview(firstLabel)
@@ -107,5 +109,12 @@ class ViewController: UIViewController {
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-160)
         }
     }
+    @objc func showView() {
+        let second = SecondViewController()
+        second.firstName = addNameOne.text
+        second.secondName = adNameTwo.text
+        self.present(second, animated: true, completion: nil)
+    }
+
 }
 
