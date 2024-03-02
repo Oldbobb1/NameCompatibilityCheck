@@ -41,7 +41,16 @@ class SecondViewController: UIViewController{
         return label
     }()
     
-    let progress: UIProgressView = {
+    private let buttonCreat: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Go Back", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 11
+        button.backgroundColor = .systemBlue
+        return button
+    }()
+    
+    private let progress: UIProgressView = {
         let prog = UIProgressView()
         //        prog.progressImage = .actions
         //        prog.trackTintColor = .gray
@@ -54,8 +63,39 @@ class SecondViewController: UIViewController{
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        view.addSubview(firstLabel)
+        view.addSubview(secondLabel)
+        view.addSubview(progress)
+        view.addSubview(buttonCreat)
+        view.addSubview(thirdLabel)
         
+        firstLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(100)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        secondLabel.snp.makeConstraints { make in
+            make.top.equalTo(firstLabel.snp.top).offset(70)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        progress.snp.makeConstraints { make in
+            make.top.equalTo(secondLabel.snp.top).offset(70)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        thirdLabel.snp.makeConstraints { make in
+            make.top.equalTo(progress.snp.top).offset(50)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        buttonCreat.snp.makeConstraints { make in
+            make.top.equalTo(thirdLabel.snp.top).offset(70)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(140)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-140)
+        }
     }
-    
-    
 }
