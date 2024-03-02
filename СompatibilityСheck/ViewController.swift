@@ -109,12 +109,12 @@ class ViewController: UIViewController {
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-160)
         }
     }
+    
     @objc func showView() {
         let second = SecondViewController()
         second.firstName = addNameOne.text
         second.secondName = adNameTwo.text
         self.present(second, animated: true, completion: nil)
     }
-
 }
 
