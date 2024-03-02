@@ -32,40 +32,19 @@ class ViewController: UIViewController {
         view.addSubview(adNameTwo)
         view.addSubview(button)
         
-        firstLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(100)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        
-        secondLabel.snp.makeConstraints { make in
-            make.top.equalTo(firstLabel.snp.top).offset(100)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            //          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
-        }
-        
-        addNameOne.snp.makeConstraints { make in
-            make.top.equalTo(firstLabel.snp.top).offset(100)
-            make.leading.equalTo(secondLabel.snp.leading).offset(160)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        
-        thirdLabel.snp.makeConstraints { make in
-            make.top.equalTo(secondLabel.snp.top).offset(100)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            //          make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-200)
-        }
-        
-        adNameTwo.snp.makeConstraints { make in
-            make.top.equalTo(addNameOne.snp.top).offset(100)
-            make.leading.equalTo(thirdLabel.snp.leading).offset(160)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        
-        button.snp.makeConstraints { make in
-            make.top.equalTo(adNameTwo.snp.top).offset(100)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(160)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-160)
+        applyView(firstLabel, topOffset: 100, leadingOffset: 20, trailingOffset: -20)
+        applyView(secondLabel, topOffset: 200, leadingOffset: -20, trailingOffset: -220)
+        applyView(addNameOne, topOffset: 200, leadingOffset: 180, trailingOffset: -20)
+        applyView(thirdLabel, topOffset: 300, leadingOffset: 20, trailingOffset: -220)
+        applyView(adNameTwo, topOffset: 300, leadingOffset: 180, trailingOffset: -20)
+        applyView(button, topOffset: 400, leadingOffset: 160, trailingOffset: -160)
+    }
+    
+    func applyView(_ element: UIView, topOffset: CGFloat, leadingOffset: CGFloat, trailingOffset: CGFloat) {
+        element.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(topOffset)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(leadingOffset)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(trailingOffset)
         }
     }
     

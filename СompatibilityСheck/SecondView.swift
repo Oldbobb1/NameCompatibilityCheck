@@ -13,7 +13,6 @@ class SecondViewController: UIViewController{
     var secondName: String!
     
     private var resultValue = 0
-    
     private let firstLabel = createLabel(text: "Compatibility of", fontSize: 30)
     private let secondLabel = createLabel(text: "First Name and Second Name", fontSize: 20)
     private let thirdLabel = createLabel(text: "%", fontSize: 15)
@@ -49,33 +48,18 @@ class SecondViewController: UIViewController{
         view.addSubview(button)
         view.addSubview(thirdLabel)
         
-        firstLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(100)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        
-        secondLabel.snp.makeConstraints { make in
-            make.top.equalTo(firstLabel.snp.top).offset(70)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        progress.snp.makeConstraints { make in
-            make.top.equalTo(secondLabel.snp.top).offset(70)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        
-        thirdLabel.snp.makeConstraints { make in
-            make.top.equalTo(progress.snp.top).offset(50)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-        }
-        
-        button.snp.makeConstraints { make in
-            make.top.equalTo(thirdLabel.snp.top).offset(70)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(140)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-140)
+        applyView(firstLabel, topOffset: 100, leadingOffset: 20, trailingOffset: -20)
+        applyView(secondLabel, topOffset: 170, leadingOffset: 20, trailingOffset: -20)
+        applyView(progress, topOffset: 240, leadingOffset: 20, trailingOffset: -20)
+        applyView(thirdLabel, topOffset: 290, leadingOffset: 20, trailingOffset: -20)
+        applyView(button, topOffset: 360, leadingOffset: 140, trailingOffset: -140)
+    }
+    
+    func applyView(_ element: UIView, topOffset: CGFloat, leadingOffset: CGFloat, trailingOffset: CGFloat) {
+        element.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(topOffset)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(leadingOffset)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(trailingOffset)
         }
     }
     
