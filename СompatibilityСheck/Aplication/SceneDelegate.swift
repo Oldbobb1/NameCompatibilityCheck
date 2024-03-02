@@ -1,9 +1,8 @@
-//
 //  SceneDelegate.swift
+
 //  СompatibilityСheck
-//
+
 //  Created by Bobbi R. on 2.03.24.
-//
 
 import UIKit
 
