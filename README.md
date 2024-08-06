@@ -2,6 +2,9 @@
 
 This mini-app was developed as part of the "My First Swift Apps (Updated)" course on swiftbook.org. While the course demonstrated how to create an app using storyboard, I chose to build this app entirely with code, avoiding the use of storyboard for a more programmatic approach.
 
+![App Demo](https://github.com/user-attachments/assets/81b73ad7-74e2-4fee-b5ca-87e8d977c383)
+
+
 
 ## Features
 
@@ -27,8 +30,3 @@ This mini-app was developed as part of the "My First Swift Apps (Updated)" cours
 2. Open the project in Xcode.
 3. Build and run the app on the iOS simulator or a physical device.
 
-## Future Improvements
-
-- Add more features and functionalities.
-- Improve the UI/UX design.
-- Refactor code for better readability and maintenance.
