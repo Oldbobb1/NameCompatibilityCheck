@@ -24,9 +24,9 @@ https://github.com/user-attachments/assets/81b73ad7-74e2-4fee-b5ca-87e8d977c383
 - To provide a clear example of how to manage UI and logic purely through code.
 - To offer a resource for beginners learning Swift and iOS development.
 
-## Installation
+<!--## Installation
 
 1. Clone the repository: `git clone https://github.com/Oldbobb1/compatibility-Check.git`
 2. Open the project in Xcode.
-3. Build and run the app on the iOS simulator or a physical device.
+3. Build and run the app on the iOS simulator or a physical device.-->
 
