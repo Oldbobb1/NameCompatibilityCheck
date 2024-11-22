@@ -1,32 +1,31 @@
-# Compatibility Check
+# 🧩 Compatibility Check
 
-This mini-app was developed as part of the "My First Swift Apps (Updated)" course on [swiftbook.org](https://swiftbook.org). While the course demonstrated how to create an app using storyboard, I chose to build this app entirely with code, avoiding the use of storyboard for a more programmatic approach.
+This mini-app was developed as part of the "My First Swift Apps (Updated)" course  [swiftbook.org](https://swiftbook.org).The course demonstrates creating an app using Storyboard, however I decided to take a different route and implement the project entirely through code, without using Storyboard.
 
-https://github.com/user-attachments/assets/81b73ad7-74e2-4fee-b5ca-87e8d977c383
+This allowed for a deeper understanding of the programmatic approach to creating interfaces in iOS.
 
+## 🔑 Key Features
+* 🖼️ **Fully programmatic interface**: All UI elements are created without using Storyboard.
+* 🎓 **Educational purpose**: The app serves as a tool to learn the basics of Swift and iOS development.
+* 🔧 **SnapKit integration**: Uses a popular library to simplify Auto Layout in code.
 
+## 🛠️ Technology
+* 🐦 **Swift**: The main programming language.
+* 💻 **Xcode**: Integrated development environment for testing and writing code.
+* 📏 **SnapKit**: Library for simplifying Auto Layout description in code.
 
-## Features
+## 🎯 Project goals
+* 🌍 Demonstration of iOS-application development capabilities without using Storyboard.
+* 🧩 To consolidate knowledge on UI creation and controlling application logic through code.
+* 📚 Providing an example for novice developers learning Swift and iOS.
 
-- **No Storyboard**: The app is built entirely with Swift code, showcasing a programmatic approach to iOS development.
-- **Compatibility Checking**: The app provides functionality to check compatibility between different inputs.
-- **Educational Purpose**: It serves as a learning tool for understanding the fundamentals of Swift and iOS development.
+## 📦 Functionality
+* 🧩 Checks the compatibility of names. 
+* 🪄 Simple and easy to understand interface.
+* 🚀 A basis for experimentation and extensions.
 
-## Technologies Used
+## 🎥 Demo
 
-- **Swift**: The primary programming language used for iOS development.
-- **Xcode**: The integrated development environment (IDE) used for building and testing the app.
-- **SnapKit**: A popular third-party library used for Auto Layout in Swift, making it easier to define constraints programmatically.
+Below is a demo of the app in action.
 
-## Goals
-
-- To demonstrate the ability to build an iOS app without relying on storyboard.
-- To provide a clear example of how to manage UI and logic purely through code.
-- To offer a resource for beginners learning Swift and iOS development.
-
-<!--## Installation
-
-1. Clone the repository: `git clone https://github.com/Oldbobb1/compatibility-Check.git`
-2. Open the project in Xcode.
-3. Build and run the app on the iOS simulator or a physical device.-->
-
+![preview](https://github.com/user-attachments/assets/81b73ad7-74e2-4fee-b5ca-87e8d977c383)
